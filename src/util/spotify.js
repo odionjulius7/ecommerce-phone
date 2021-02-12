@@ -1,26 +1,29 @@
-let accessToken;
+// Note this is for Jammming App
 
-const Spotify = {
-    getAccessToken() {
-        if (accessToken) {
-            return accessToken;
-        }
 
-        // check for accessToken match
-        const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
-        const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
+// let accessToken;
 
-        if (accessTokenMatch && expiresInMatch) {
-            accessToken = accessTokenMatch[1];
-            const expiresIn = Number(expiresInMatch[1]);
+// const Spotify = {
+//     getAccessToken() {
+//         if (accessToken) {
+//             return accessToken;
+//         }
 
-            // help you wipe the access token and URL parameters
-            window.setTimeout(() => accessToken = '', expiresIn * 1000);
-            window.history.pushState('Access Token', null, '/');
+//         // check for accessToken match
+//         const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
+//         const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
 
-            return accessToken;
-        }
-    }
-}
+//         if (accessTokenMatch && expiresInMatch) {
+//             accessToken = accessTokenMatch[1];
+//             const expiresIn = Number(expiresInMatch[1]);
 
-export default Spotify;
+//             // help you wipe the access token and URL parameters
+//             window.setTimeout(() => accessToken = '', expiresIn * 1000);
+//             window.history.pushState('Access Token', null, '/');
+
+//             return accessToken;
+//         }
+//     }
+// }
+
+// export default Spotify;

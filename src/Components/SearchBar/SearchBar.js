@@ -1,34 +1,36 @@
-import React from "react";
-import "./SearchBar.css";
+// Note this is for Jammming App
 
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
+// import React from "react";
+// import "./SearchBar.css";
 
-        this.state = {
-            term: ''
-        }
+// class SearchBar extends React.Component {
+//     constructor(props) {
+//         super(props);
 
-        this.Search = this.Search.bind(this);
-        this.handleTermChange = this.handleTermChange.bind(this);
-    }
+//         this.state = {
+//             term: ''
+//         }
 
-    Search() {
-        this.props.onSearch(this.state.term);
-    }
+//         this.Search = this.Search.bind(this);
+//         this.handleTermChange = this.handleTermChange.bind(this);
+//     }
 
-    handleTermChange(e) {
-        this.setState({term: e.target.value});
-    }
+//     Search() {
+//         this.props.onSearch(this.state.term);
+//     }
 
-    render() {
-        return (
-        <div className="SearchBar">
-           <input onChange={this.handleTermChange} placeholder="Enter A Song, Album, or Artist" />
-           <button className="SearchButton">SEARCH</button>
-        </div>
-        );
-    }
-}
+//     handleTermChange(e) {
+//         this.setState({term: e.target.value});
+//     }
 
-export default SearchBar;
+//     render() {
+//         return (
+//         <div className="SearchBar">
+//            <input onChange={this.handleTermChange} placeholder="Enter A Song, Album, or Artist" />
+//            <button className="SearchButton">SEARCH</button>
+//         </div>
+//         );
+//     }
+// }
+
+// export default SearchBar;

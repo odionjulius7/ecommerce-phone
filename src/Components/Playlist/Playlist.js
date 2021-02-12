@@ -1,30 +1,32 @@
-import React from "react";
-import "./Playlist.css";
+// Note this is for Jammming App
 
-import TrackList from "../TrackList/TrackList";
+// import React from "react";
+// import "./Playlist.css";
 
-class Playlist extends React.Component {
-    constructor(props) {
-        super(props);
+// import TrackList from "../TrackList/TrackList";
 
-        this.handleNameChange = this.handleNameChange.bind(this);
-    }
+// class Playlist extends React.Component {
+//     constructor(props) {
+//         super(props);
 
-    handleNameChange(e) {
-        this.props.onNameChange(e.target.value);
-    }
+//         this.handleNameChange = this.handleNameChange.bind(this);
+//     }
 
-    render() {
-        return (
-            <div className="Playlist">
-                <input defaultValue={"New Playlist"} onChange={this.handleNameChange} />
-                <TrackList tracks={this.props.playlistTracks} 
-                    onRemove={this.props.onRemove}
-                    isRemoval={true} />
-                <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
-            </div>
-        );
-    }
-}
+//     handleNameChange(e) {
+//         this.props.onNameChange(e.target.value);
+//     }
 
-export default Playlist;
+//     render() {
+//         return (
+//             <div className="Playlist">
+//                 <input defaultValue={"New Playlist"} onChange={this.handleNameChange} />
+//                 <TrackList tracks={this.props.playlistTracks} 
+//                     onRemove={this.props.onRemove}
+//                     isRemoval={true} />
+//                 <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
+//             </div>
+//         );
+//     }
+// }
+
+// export default Playlist;
